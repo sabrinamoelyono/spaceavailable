@@ -16,28 +16,30 @@ body{width:1080px;height:1920px;background:#050505;overflow:hidden;font-family:'
 .tag sup{font-size:22px;vertical-align:28px;margin-left:2px}
 .meta{position:absolute;font-size:20px;letter-spacing:.2em;color:var(--dim);text-transform:uppercase}
 .tape{position:absolute;left:-60px;right:-60px;height:86px;background:var(--acid);color:#000;font-family:'Orbitron';font-weight:900;font-size:34px;letter-spacing:.18em;white-space:nowrap;display:flex;align-items:center;overflow:hidden}
+.vinyl{position:absolute;left:150px;top:880px;width:660px;height:660px;border-radius:50%;
+ background:
+  conic-gradient(from 20deg,rgba(255,255,255,0) 0deg,rgba(255,255,255,.28) 25deg,rgba(255,255,255,0) 55deg,rgba(255,255,255,0) 180deg,rgba(255,255,255,.22) 205deg,rgba(255,255,255,0) 235deg),
+  repeating-radial-gradient(circle,#0b0b0b 0 3px,#1c1c1c 3px 4px,#0b0b0b 4px 6px),#0b0b0b;
+ box-shadow:0 0 0 3px #2a2a2a,0 0 60px rgba(255,255,255,.12)}
+.vinyl .label{position:absolute;inset:235px;border-radius:50%;background:var(--acid);display:grid;place-items:center;box-shadow:0 0 0 14px #0b0b0b}
+.vinyl .label span{font-family:'Orbitron';font-weight:900;font-size:56px;color:#000}
+.vinyl .label::after{content:"";position:absolute;width:22px;height:22px;border-radius:50%;background:#050505;left:50%;top:50%;transform:translate(-50%,-50%)}
+.vinyl .label span{transform:translateY(-44px)}
 </style></head>
 <body><div class="poster">
 
+<div class="vinyl"><div class="label"><span>FM</span></div></div>
 <svg class="layer" viewBox="0 0 1080 1920" width="1080" height="1920">
   <defs>
     <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .09 0"/></filter>
-    <radialGradient id="sphere" cx="38%" cy="32%" r="70%">
-      <stop offset="0" stop-color="#ffffff"/><stop offset=".12" stop-color="#e6e6e6"/>
-      <stop offset=".35" stop-color="#8a8a8a"/><stop offset=".55" stop-color="#2a2a2a"/>
-      <stop offset=".72" stop-color="#111"/><stop offset=".86" stop-color="#5a5a5a"/><stop offset="1" stop-color="#1a1a1a"/>
-    </radialGradient>
     <linearGradient id="ring" x1="0" x2="1">
       <stop offset="0" stop-color="#333"/><stop offset=".3" stop-color="#fff"/><stop offset=".5" stop-color="#777"/>
       <stop offset=".75" stop-color="#eee"/><stop offset="1" stop-color="#222"/>
     </linearGradient>
-    <radialGradient id="glow"><stop offset="0" stop-color="#fff" stop-opacity=".18"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
-    <linearGradient id="star" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#777"/></linearGradient>
-    <clipPath id="front"><rect x="0" y="1220" width="1200" height="400"/></clipPath>
   </defs>
 
   <!-- warped grid -->
-  <g stroke="#ffffff" stroke-opacity=".07" stroke-width="1.5" fill="none" id="grid"></g>
+  <g stroke="#ffffff" stroke-opacity=".06" stroke-width="1.5" fill="none" id="grid"></g>
 
   <!-- diagonal scratch marks -->
   <g stroke="#fff" stroke-opacity=".12" stroke-width="3" stroke-linecap="round">
@@ -50,30 +52,13 @@ body{width:1080px;height:1920px;background:#050505;overflow:hidden;font-family:'
     <path d="M40 1860 h40 M60 1840 v40"/><path d="M1000 1860 h40 M1020 1840 v40"/>
   </g>
 
-  <!-- chrome orb with orbit ring -->
-  <circle cx="560" cy="1220" r="420" fill="url(#glow)"/>
-  <ellipse cx="560" cy="1220" rx="380" ry="80" fill="none" stroke="url(#ring)" stroke-width="16" transform="rotate(-18 560 1220)" opacity=".9"/>
-  <circle cx="560" cy="1220" r="230" fill="url(#sphere)"/>
-  <ellipse cx="490" cy="1135" rx="70" ry="38" fill="#fff" opacity=".55" transform="rotate(-30 490 1135)"/>
-  <!-- front half of ring over sphere -->
-  <g transform="rotate(-18 560 1220)"><g clip-path="url(#front)">
-    <ellipse cx="560" cy="1220" rx="380" ry="80" fill="none" stroke="url(#ring)" stroke-width="16"/>
-  </g></g>
-  <!-- target reticle on orb -->
-  <g stroke="var(--acid)" stroke-width="3" fill="none" opacity=".95">
-    <circle cx="560" cy="1220" r="290" stroke-dasharray="6 14"/>
-    <path d="M560 900 v50 M560 1490 v50 M240 1220 h50 M830 1220 h50"/>
+  <!-- tonearm -->
+  <g>
+    <circle cx="960" cy="880" r="46" fill="url(#ring)" stroke="#000" stroke-width="3"/>
+    <circle cx="960" cy="880" r="18" fill="#111"/>
+    <path d="M960 880 L900 1240 L790 1360" fill="none" stroke="url(#ring)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="752" y="1340" width="70" height="40" rx="6" fill="url(#ring)" transform="rotate(-42 787 1360)"/>
   </g>
-
-  <!-- chrome 4-point stars, sharp -->
-  <g fill="url(#star)">
-    <path d="M150 1520 L162 1580 L222 1592 L162 1604 L150 1664 L138 1604 L78 1592 L138 1580Z"/>
-    <path d="M940 980 L948 1020 L988 1028 L948 1036 L940 1076 L932 1036 L892 1028 L932 1020Z"/>
-    <path d="M900 330 L905 355 L930 360 L905 365 L900 390 L895 365 L870 360 L895 355Z"/>
-  </g>
-
-  <!-- dots -->
-  <g fill="#fff" opacity=".6" id="dots"></g>
 
   <!-- barcode -->
   <g fill="#ededed" id="barcode" transform="translate(90 1700)"></g>
@@ -85,7 +70,7 @@ body{width:1080px;height:1920px;background:#050505;overflow:hidden;font-family:'
 <div class="title"><span>AFTER</span><span>HOURS</span></div>
 <div class="tag">07<sup>PM</sup> — 12<sup>AM</sup></div>
 
-<div class="meta" style="top:770px;right:90px;text-align:right">Lat 00.00<br>Lon 00.00</div>
+<div class="meta" style="top:770px;right:90px;text-align:right">Doors 19:00<br>Last call 00:00</div>
 <div class="meta" style="top:1000px;left:90px;writing-mode:vertical-rl;transform:rotate(180deg)">After Hours / FM / 2026</div>
 
 <div class="tape" style="top:1580px;transform:rotate(-4deg)">
@@ -96,15 +81,12 @@ body{width:1080px;height:1920px;background:#050505;overflow:hidden;font-family:'
 </div>
 
 <script>
-// warped grid
+// straight grid
 const g=document.getElementById('grid');let s='';
-for(let x=-40;x<=1120;x+=60){let d=`M${x} 0`;for(let y=0;y<=1920;y+=40){d+=` L${x+Math.sin(y/260+x/300)*18} ${y}`}s+=`<path d="${d}"/>`}
-for(let y=0;y<=1920;y+=60){let d=`M0 ${y}`;for(let x=0;x<=1080;x+=40){d+=` L${x} ${y+Math.sin(x/220+y/350)*16}`}s+=`<path d="${d}"/>`}
+for(let x=0;x<=1080;x+=60)s+=`<path d="M${x} 0 V1920"/>`;
+for(let y=0;y<=1920;y+=60)s+=`<path d="M0 ${y} H1080"/>`;
 g.innerHTML=s;
-// dots (seeded)
-let r=7;const rnd=()=>(r=(r*9301+49297)%233280)/233280;let ds='';
-for(let i=0;i<40;i++)ds+=`<circle cx="${rnd()*1080}" cy="${rnd()*1920}" r="${1+rnd()*2.5}"/>`;
-document.getElementById('dots').innerHTML=ds;
+let r=7;const rnd=()=>(r=(r*9301+49297)%233280)/233280;
 // barcode
 let bs='',bx=0;for(let i=0;i<46;i++){const w=[2,3,5,8][Math.floor(rnd()*4)];bs+=`<rect x="${bx}" y="0" width="${w}" height="70"/>`;bx+=w+[3,4,6][Math.floor(rnd()*3)]}
 document.getElementById('barcode').innerHTML=bs;

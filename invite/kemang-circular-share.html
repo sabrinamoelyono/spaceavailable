@@ -1,0 +1,76 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Inter+Tight:wght@700;800&family=IBM+Plex+Mono:wght@400;500&family=Gochi+Hand&display=block" rel="stylesheet">
+<style>
+:root{--fg:#F4F2EE;--dim:rgba(244,242,238,.66)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1920px;background:#141413;overflow:hidden;color:var(--fg);font-family:'Inter',sans-serif}
+.poster{position:relative;width:100%;height:100%;background:url(assets/shelves-blur.jpg) center/cover}
+.abs{position:absolute;left:0;right:0;text-align:center}
+.mark{font-family:'Inter Tight';font-weight:800;letter-spacing:-.045em}
+.mark sup{font-size:.36em;font-weight:700;vertical-align:1.1em;margin-left:2px;letter-spacing:0}
+.hand{font-family:'Gochi Hand',cursive;text-transform:uppercase;letter-spacing:.02em}
+.mono{font-family:'IBM Plex Mono',monospace}
+
+.brand{top:236px;font-size:36px}
+.invite{top:296px;font-size:100px;line-height:1}
+.join{top:416px;font-size:26px;letter-spacing:.06em;color:var(--dim)}
+.title{top:460px;font-family:'Inter Tight';font-weight:800;font-size:96px;line-height:.92;letter-spacing:-.055em}
+
+.card{position:absolute;left:60px;top:690px;width:960px;height:449px;border-radius:22px;overflow:hidden;
+ background:url(assets/bar.jpg) 50% 100%/106% auto no-repeat;box-shadow:0 30px 80px rgba(0,0,0,.45),0 0 0 2px rgba(255,255,255,.18)}
+
+.quote{top:1176px;font-size:31px;line-height:1.22}
+.date{top:1318px;font-size:40px;line-height:1.1;font-weight:500}
+.venue{top:1430px;font-size:22px;line-height:1.38;color:var(--dim);font-weight:500}
+.venue b{color:var(--fg);font-weight:700}
+
+.from{top:1530px;display:flex;justify-content:center;align-items:center;gap:20px}
+.from .hand{font-size:34px}
+.from .slot{width:420px;height:72px;border:2.5px dashed rgba(255,255,255,.75);border-radius:999px;
+ display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono';font-size:22px;color:var(--dim)}
+
+.partners{top:1650px;display:flex;justify-content:center;align-items:center;gap:34px}
+.partners .mark{font-size:30px}
+.partners img{height:66px;display:block}
+.partners i{width:2px;height:48px;background:rgba(255,255,255,.35)}
+svg.layer{position:absolute;inset:0;pointer-events:none}
+</style></head>
+<body><div class="poster">
+
+<svg class="layer" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <defs>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .07 0"/></filter>
+    <g id="reg" stroke="#fff" stroke-width="2" fill="none">
+      <circle r="13"/><path d="M-26 0h52M0-26v52"/><circle r="4" fill="#fff" stroke="none"/>
+    </g>
+  </defs>
+  <rect width="1080" height="1920" filter="url(#grain)"/>
+  <g opacity=".85">
+    <use href="#reg" x="26" y="26"/><use href="#reg" x="1054" y="26"/>
+    <use href="#reg" x="26" y="1894"/><use href="#reg" x="1054" y="1894"/>
+  </g>
+  <g stroke="#fff" stroke-width="2" opacity=".85">
+    <path d="M512 26h56M540 0v26"/><path d="M512 1894h56M540 1894v26"/>
+  </g>
+</svg>
+
+<div class="abs brand mark">space_available<sup>®</sup></div>
+<div class="abs invite hand">we invite you</div>
+<div class="abs join mono">TO JOIN</div>
+<div class="abs title">Kemang Circular<br>Community</div>
+
+<div class="card"></div>
+
+<div class="abs quote hand">“A neighbourhood movement that brings<br>together conscious consumption<br>and circular action”</div>
+<div class="abs date mono">Saturday, 10 October 2026<br>14.00 – 16.00</div>
+<div class="abs venue"><b>Self Care Community Centre (SCCC)</b><br>Jl. Kemang Raya 8B, 9 Jakarta Selatan 12730</div>
+
+<div class="abs from"><span class="hand">from</span><span class="slot">@ tag yourself here</span></div>
+
+<div class="abs partners">
+  <span class="mark">space_available<sup>®</sup></span><i></i>
+  <img src="assets/partners.png" alt="Daur Baur Collective, Kick Your Butt, Kopinako">
+</div>
+
+</div></body></html>

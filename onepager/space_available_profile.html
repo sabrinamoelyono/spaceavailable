@@ -53,12 +53,56 @@
   .practice li:first-child { border-top:1px dashed #4a4a4a; }
   .practice li i { font-style:normal; color:var(--mute); width:5mm; flex:none; font-size:6.6pt; padding-top:.3mm; }
 
+  .prop { font-size:9.6pt; line-height:1.3; font-weight:300; margin-top:2.2mm; letter-spacing:-.01em; }
+  .prop b { font-weight:700; }
+  .ways { display:grid; grid-template-columns:repeat(3,1fr); gap:3mm; margin-top:2.6mm; }
+  .ways > div { border-top:2px solid #fff; padding-top:1.6mm; position:relative; }
+  .ways i { position:absolute; right:0; top:1.8mm; font-style:normal; font-size:6.6pt; color:var(--mute); }
+  .ways h4 { display:inline; font-family:"Inter Display",Inter,sans-serif; font-size:13pt; font-weight:800; letter-spacing:-.02em; }
+  .ways em { font-size:7.4pt; color:#cfcfcf; font-weight:300; margin-left:1.2mm; }
+  .ways p { font-size:7pt; line-height:1.35; color:#e2e2e2; margin-top:.8mm; }
+  .ways small { display:block; font-size:6.2pt; color:var(--mute); margin-top:1mm; font-style:italic; }
   .foot { margin-top:auto; display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:4mm; padding:2.6mm 0 4.5mm; border-top:1px solid var(--line); align-items:end; }
   .foot h2 { font-family:"Inter Display",Inter,sans-serif; font-weight:800; font-size:12pt; letter-spacing:-.03em; }
   .foot div { font-size:7pt; font-style:italic; font-weight:300; color:#ddd; line-height:1.4; }
   .foot div b { font-style:italic; font-weight:300; color:#9a9a9a; display:block; }
   .base { display:flex; justify-content:space-between; font-size:6.5pt; color:#8a8a8a; padding-bottom:4mm; }
-  @media print { html,body{background:none;} .page{margin:0;} }
+  /* ---------- page 2: proposal ---------- */
+  .p2 { margin-top:6mm; }
+  .p2 .wordmark { font-size:50pt; }
+  .p2 .intro { display:grid; grid-template-columns:1.25fr 1fr; gap:7mm; margin-top:4mm; }
+  .p2 .intro .big { font-size:13.5pt; line-height:1.2; font-weight:300; letter-spacing:-.015em; }
+  .p2 .intro .big b { font-weight:700; }
+  .obj { list-style:none; }
+  .obj li { display:grid; grid-template-columns:6mm 1fr; padding:1.2mm 0; border-bottom:1px dashed #4a4a4a; font-size:7.3pt; line-height:1.3; color:#d8d8d8; }
+  .obj li:first-child { border-top:1px dashed #4a4a4a; }
+  .obj li i { font-style:normal; color:var(--mute); font-size:6.6pt; }
+  .obj li b { color:#fff; font-weight:700; display:block; font-size:8pt; }
+  .models { display:grid; grid-template-columns:repeat(3,1fr); gap:3.5mm; margin-top:2.8mm; }
+  .models .img { height:23mm; background-size:cover; background-position:center; background-color:#fff; }
+  .models .hd { display:flex; justify-content:space-between; align-items:baseline; border-bottom:2px solid #fff; padding:1.6mm 0 1mm; }
+  .models h4 { font-family:"Inter Display",Inter,sans-serif; font-size:16pt; font-weight:800; letter-spacing:-.02em; }
+  .models .hd span { font-size:7.2pt; font-style:italic; color:#cfcfcf; font-weight:300; }
+  .models .row { padding:1.2mm 0; border-bottom:1px dashed #4a4a4a; font-size:6.9pt; line-height:1.36; color:#dcdcdc; }
+  .models .row b { display:block; font-size:6.2pt; color:var(--mute); font-weight:600; text-transform:uppercase; letter-spacing:.05em; margin-bottom:.3mm; }
+  .tbc { color:#fff; border-bottom:1px dotted #9a9a9a; font-style:italic; }
+  .pk { display:grid; grid-template-columns:repeat(3,1fr); gap:3.5mm; margin-top:2.8mm; }
+  .pk > div { border:1px solid #4a4a4a; padding:2.4mm 2.6mm; display:flex; flex-direction:column; }
+  .pk > div.feat { border-color:#fff; }
+  .pk .tier { font-size:6.2pt; color:var(--mute); letter-spacing:.05em; text-transform:uppercase; font-weight:600; }
+  .pk h5 { font-size:10.5pt; font-weight:800; margin-top:.6mm; letter-spacing:-.01em; }
+  .pk .mix { font-size:6.6pt; color:#cfcfcf; font-style:italic; margin-top:.3mm; }
+  .pk p { font-size:6.9pt; line-height:1.36; color:#dcdcdc; margin-top:1.2mm; flex:1; }
+  .pk .inv { font-size:6.6pt; margin-top:1.6mm; padding-top:1.2mm; border-top:1px dashed #4a4a4a; color:var(--mute); }
+  .steps { display:grid; grid-template-columns:repeat(6,1fr); gap:2mm; margin-top:2.8mm; }
+  .steps div { border-top:1px solid #fff; padding-top:1.3mm; font-size:6.7pt; line-height:1.32; color:#cfcfcf; }
+  .steps i { font-style:normal; font-size:6.4pt; color:var(--mute); display:block; }
+  .steps b { display:block; color:#fff; font-size:8pt; font-weight:800; margin:.4mm 0 .5mm; }
+  .cta { margin-top:4.5mm; background:#fff; color:var(--ink); padding:3.6mm 4mm; display:flex; justify-content:space-between; align-items:center; gap:6mm; }
+  .cta h3 { font-family:"Inter Display",Inter,sans-serif; font-size:16pt; font-weight:800; letter-spacing:-.03em; line-height:1; }
+  .cta p { font-size:7.4pt; line-height:1.4; max-width:95mm; }
+  .cta p b { font-weight:700; }
+  @media print { html,body{background:none;} .page{margin:0;} .p2{margin-top:0;} }
 </style>
 </head>
 <body>
@@ -81,17 +125,12 @@
     <figure><div class="img" style="background-image:url(assets/recycling.jpg)"></div><figcaption><b>Recycling studio &amp; amphitheatre</b><br>plastic, remade in public</figcaption></figure>
   </div>
 
-  <div class="label"><h3>The Practice</h3><span>(how we work with others)</span></div>
-  <div class="practice">
-    <p>Each project starts with material that would otherwise be thrown away: <b>post-consumer HDPE plastic</b> collected in <b>Bali and Java</b> and made into objects in Indonesia. Between the studio and the Centre, our collaborations take many shapes, but they share one aim: <b>shaping new models for how we live, gather and grow</b>.</p>
-    <ul>
-      <li><i>01</i>Circular objects &amp; co-created capsules</li>
-      <li><i>02</i>Spaces, pop-ups &amp; retail environments</li>
-      <li><i>03</i>Furniture &amp; design editions</li>
-      <li><i>04</i>Exhibitions &amp; cultural programs</li>
-      <li><i>05</i>Gatherings, rituals &amp; events at SCCC</li>
-      <li><i>06</i>Recycling workshops &amp; community clean-ups</li>
-    </ul>
+  <div class="label"><h3>Working Together</h3><span>(three ways to partner)</span></div>
+  <p class="prop">We make your sustainability story something people can <b>hold</b>, <b>visit</b> and <b>take part in</b>. Every project starts with post-consumer plastic from <b>Bali and Java</b>, remade in Indonesia.</p>
+  <div class="ways">
+    <div><i>01</i><h4>MAKE</h4><em>objects</em><p>Co-branded circular products, capsules and furniture editions made from waste.</p><small>with Nike · Public Possession · DSM Singapore</small></div>
+    <div><i>02</i><h4>BUILD</h4><em>spaces</em><p>Pop-ups, retail environments, exhibitions and live recycling workshops.</p><small>with Goldwin · Highsnobiety · Brain Dead</small></div>
+    <div><i>03</i><h4>GATHER</h4><em>programs</em><p>Co-hosted rituals, launches, team sessions and clean-ups at SCCC, Jakarta.</p><small>with Empirical · Kemang Recycling Club</small></div>
   </div>
 
   <div class="label"><h3>Foundational Rituals</h3><span>(making space for ourselves and each other)</span></div>
@@ -118,6 +157,77 @@
     <h2>making space for nature</h2>
     <div><b>(Location)</b>Jl. Kemang Raya 8B No. 9<br>Jakarta Selatan 12730</div>
     <div><b>(Contact)</b>studio@spaceavailable.tv<br>@space_available_jakarta</div>
+    <div><b>(Visit)</b>www.spaceavailable.tv<br>&nbsp;</div>
+  </div>
+</div>
+
+<div class="page p2">
+  <div class="meta"><span>space_available®</span><span>partnership proposal</span><span>jakarta</span></div>
+  <div class="wordmark">partner_with_us</div>
+  <div class="intro">
+    <p class="big">Brands and institutions come to <b>Space Available</b> to turn intention into something <b>real</b>: an object made from waste, a space people want to visit, a community that keeps coming back. We bring <b>material</b>, <b>culture</b> and <b>community</b> together under one roof.</p>
+    <ul class="obj">
+      <li><i>01</i><span><b>Make sustainability tangible</b>Objects and spaces built from post-consumer plastic, not just claims.</span></li>
+      <li><i>02</i><span><b>Earn cultural credibility</b>A design language trusted by Nike, Goldwin, DSM and Highsnobiety.</span></li>
+      <li><i>03</i><span><b>Build community, not just reach</b>Weekly rituals with a creative Jakarta audience.</span></li>
+      <li><i>04</i><span><b>Show the impact</b>Plastic diverted, per object and per project.</span></li>
+    </ul>
+  </div>
+
+  <div class="label"><h3>Three Ways to Partner</h3><span>(make · build · gather)</span></div>
+  <div class="models">
+    <div>
+      <div class="img" style="background-image:url(assets/nike.jpg)"></div>
+      <div class="hd"><h4>MAKE</h4><span>objects</span></div>
+      <div class="row"><b>What we do</b>Co-branded circular products, capsules, merchandise and furniture editions, designed and produced from waste plastic.</div>
+      <div class="row"><b>You receive</b>A limited edition with a built-in story and impact data per piece (e.g. 120g of plastic per Swoosh incense holder).</div>
+      <div class="row"><b>Ideal for</b>Fashion, lifestyle, sports and hospitality brands.</div>
+      <div class="row"><b>Done with</b>Nike · Public Possession · Highsnobiety · DSM Singapore</div>
+    </div>
+    <div>
+      <div class="img" style="background-image:url(assets/goldwin.jpg)"></div>
+      <div class="hd"><h4>BUILD</h4><span>spaces</span></div>
+      <div class="row"><b>What we do</b>Pop-ups, retail fit-outs, exhibitions and installations, with live recycling workshops built in.</div>
+      <div class="row"><b>You receive</b>A destination people visit, share and remember, with circularity shown in action.</div>
+      <div class="row"><b>Ideal for</b>Retailers, malls, hotels, brands entering new markets, cultural institutions.</div>
+      <div class="row"><b>Done with</b>Goldwin (Tokyo) · Highsnobiety (Miami) · Brain Dead (LA)</div>
+    </div>
+    <div>
+      <div class="img" style="background-image:url(assets/recycling.jpg)"></div>
+      <div class="hd"><h4>GATHER</h4><span>programs</span></div>
+      <div class="row"><b>What we do</b>Co-hosted rituals, launches, private sessions, team wellbeing days and community clean-ups at SCCC.</div>
+      <div class="row"><b>You receive</b>Ongoing presence with an engaged audience, plus content and employee engagement.</div>
+      <div class="row"><b>Ideal for</b>Food &amp; drink and wellness brands, corporates (CSR / ESG), schools.</div>
+      <div class="row"><b>Done with</b>Empirical (Inner Spirit Drinks Club) · Kemang Recycling Club</div>
+    </div>
+  </div>
+
+  <div class="label"><h3>Partnership Packages</h3><span>(start small, or go all in)</span></div>
+  <div class="pk">
+    <div><span class="tier">Entry</span><h5>Ritual Partner</h5><span class="mix">GATHER</span><p>Co-host one of our weekly programs for a season, or host a private session or launch at SCCC. Includes brand integration and shared content.</p><div class="inv">Investment: <span class="tbc">[to confirm]</span></div></div>
+    <div class="feat"><span class="tier">Signature</span><h5>Circular Capsule</h5><span class="mix">MAKE + GATHER</span><p>A co-branded object edition made from waste plastic, launched with an evening at SCCC and a recycling workshop.</p><div class="inv">Investment: <span class="tbc">[to confirm]</span></div></div>
+    <div><span class="tier">Flagship</span><h5>Full Ecosystem</h5><span class="mix">MAKE + BUILD + GATHER</span><p>Product, space and program together: a capsule, a pop-up or installation, and a program series around it.</p><div class="inv">Investment: <span class="tbc">[to confirm]</span></div></div>
+  </div>
+
+  <div class="label"><h3>How It Works</h3><span>(from first conversation to impact)</span></div>
+  <div class="steps">
+    <div><i>01</i><b>Conversation</b>Your goals, audience and timeline.</div>
+    <div><i>02</i><b>Concept</b>A proposal across make, build and gather.</div>
+    <div><i>03</i><b>Material</b>Sourcing post-consumer plastic.</div>
+    <div><i>04</i><b>Design &amp; production</b>Made in Indonesia.</div>
+    <div><i>05</i><b>Launch</b>At SCCC, in your space, or both.</div>
+    <div><i>06</i><b>Impact</b>What was made, gathered and diverted.</div>
+  </div>
+
+  <div class="cta">
+    <h3>let’s make<br>space together</h3>
+    <p>Tell us what you want to make, build or gather, and we’ll come back with a concept. <b>studio@spaceavailable.tv</b> · @space_available_jakarta · Jl. Kemang Raya 8B No. 9, Jakarta Selatan 12730</p>
+  </div>
+
+  <div class="foot">
+    <h2>making space for nature</h2>
+    <div><b>(Location)</b>Kemang, Jakarta<br>&nbsp;</div>
+    <div><b>(Contact)</b>studio@spaceavailable.tv<br>&nbsp;</div>
     <div><b>(Visit)</b>www.spaceavailable.tv<br>&nbsp;</div>
   </div>
 </div>

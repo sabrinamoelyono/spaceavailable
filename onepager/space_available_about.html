@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Space Available About</title>
+<link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&family=Libre+Caslon+Text&family=Cormorant+SC:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  @page { size: 1440px 810px; margin: 0; }
+  :root { --bg:#e8e7e1; --ink:#111; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html,body { background:var(--bg); }
+  body { color:var(--ink); -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .slide { width:1440px; height:810px; position:relative; overflow:hidden; background:var(--bg); padding:24px 24px 0; }
+  .frame { position:absolute; left:24px; right:24px; top:24px; height:52px; border:1.5px solid var(--ink); border-bottom:none; }
+  .about { position:absolute; left:38px; top:28px; font-family:"Inter Display",Inter,"Helvetica Neue",Arial,sans-serif; font-weight:800; font-size:42px; letter-spacing:-.05em; }
+  .col { position:absolute; left:258px; right:24px; top:30px; }
+  .logo { font-family:"Inter Display",Inter,sans-serif; font-weight:800; font-size:92px; letter-spacing:-.055em; line-height:1; margin-left:-4px; }
+  .logo sup { font-size:20px; letter-spacing:0; vertical-align:top; position:relative; top:14px; margin-left:2px; }
+  .serif { font-family:"Sorts Mill Goudy",Georgia,serif; }
+  .n { font-family:"Libre Caslon Text",Georgia,serif; font-size:.9em; }
+  .proof { margin-top:46px; font-size:18.5px; padding-bottom:9px; border-bottom:1.5px solid var(--ink); letter-spacing:-.005em; }
+  .head { margin-top:20px; font-family:"Helvetica Neue",Inter,Arial,sans-serif; font-weight:800; font-size:44px; line-height:1.08; letter-spacing:-.045em; max-width:1080px; }
+  .nw { white-space:nowrap; }
+  .lede { margin-top:58px; font-size:19px; line-height:1.3; padding-bottom:12px; border-bottom:1.5px solid var(--ink); max-width:none; }
+  .cards { display:grid; grid-template-columns:repeat(4,222px); gap:11px; margin-top:26px; }
+  .cards .img { height:126px; background-size:cover; background-position:center; background-color:#fff; }
+  .cards h4 { font-family:"Cormorant SC","Sorts Mill Goudy",serif; font-weight:600; font-size:14.5px; letter-spacing:.12em; text-align:center; margin-top:20px; }
+  .cards p { font-size:12px; line-height:1.45; text-align:center; margin-top:4px; letter-spacing:.02em; }
+  .foot { position:absolute; left:24px; right:24px; bottom:26px; display:grid; grid-template-columns:234px 232px 232px 232px 1fr 30px; font-size:12px; align-items:baseline; }
+  .foot .sc { font-family:"Cormorant SC","Sorts Mill Goudy",serif; font-weight:600; font-size:13px; letter-spacing:.02em; }
+  .foot i { font-style:normal; display:inline-block; width:26px; }
+  .foot .pg { text-align:right; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="frame"></div>
+  <div class="about">About</div>
+  <div class="col">
+    <div class="logo">space_available<sup>®</sup></div>
+
+    <p class="proof serif">Founded in <span class="n">2020</span> | <span class="n">11</span> tonnes of recycled plastic in our Jakarta building | Collaborations with Nike, Goldwin &amp; Dover Street Market</p>
+
+    <h1 class="head">Circular design studio and cultural wellbeing community, turning plastic waste into objects, spaces and rituals.</h1>
+
+    <p class="lede serif">It starts with waste. <span class="nw">Space Available</span> turns post-consumer plastic from Bali and Java into objects and spaces that brands like Nike, Goldwin and Dover Street Market put their name on. Around that core, our Self Care Community Centre in Kemang, Jakarta brings people together for meditation, sound, food and learning.</p>
+
+    <div class="cards serif">
+      <div><div class="img" style="background-image:url(assets/nike.jpg)"></div><h4>NIKE, INDONESIA</h4><p>Give Fresh Air: Swoosh incense holders<br>and coasters from ocean-bound plastic.</p></div>
+      <div><div class="img" style="background-image:url(assets/goldwin.jpg)"></div><h4>GOLDWIN, TOKYO</h4><p>REWORK, a pop-up circular design<br>centre and living workshop.</p></div>
+      <div><div class="img" style="background-image:url(assets/dsm.jpg)"></div><h4>DOVER STREET MARKET</h4><p>Singapore. Self Assembly Stool: <span class="n">5</span> pieces,<br><span class="n">100%</span> recycled plastic, no glue or tools.</p></div>
+      <div><div class="img" style="background-image:url(assets/building_full.jpg)"></div><h4>SCCC, JAKARTA</h4><p>Our home, crafted from <span class="n">11</span> tonnes<br>of recycled plastic, with weekly rituals.</p></div>
+    </div>
+  </div>
+
+  <div class="foot serif">
+    <span class="sc">©A<span class="n">3000</span> Group <span class="n">2026</span></span>
+    <span><i>E.</i>sabrina@spaceavailable.tv</span>
+    <span><i>IG.</i>@space_available_jakarta</span>
+    <span><i>W.</i>spaceavailable.tv</span>
+    <span>Make Space Within™</span>
+    <span class="pg"><span class="n">1</span></span>
+  </div>
+</div>
+</body>
+</html>

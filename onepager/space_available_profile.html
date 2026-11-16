@@ -19,7 +19,7 @@
   .sub h2 sup { font-size:6pt; vertical-align:top; position:relative; top:1pt; }
   .sub p, .ital { font-style:italic; font-size:8pt; color:#ddd; font-weight:300; }
 
-  .hero { position:relative; margin-top:4mm; height:39mm; background:url(assets/facade.jpg) center 40%/cover; }
+  .hero { position:relative; margin-top:4mm; height:39mm; background:url(assets/building_night.jpg) center 62%/100% auto; }
   .hero .tag { position:absolute; left:4mm; top:3mm; font-weight:800; font-size:15pt; letter-spacing:-.01em; }
 
   .lede { font-size:10.4pt; line-height:1.24; font-weight:300; letter-spacing:-.01em; margin:4mm 0 0; }
@@ -71,12 +71,12 @@
   .base { display:flex; justify-content:space-between; font-size:6.5pt; color:#8a8a8a; padding-bottom:4mm; }
   /* ---------- page 2: proposal ---------- */
   .p2 { margin-top:6mm; }
-  .p2 .wordmark { font-size:50pt; }
+  .p2 .wordmark { font-size:44pt; }
   .p2 .intro { display:grid; grid-template-columns:1.25fr 1fr; gap:7mm; margin-top:4mm; }
-  .p2 .intro .big { font-size:13.5pt; line-height:1.2; font-weight:300; letter-spacing:-.015em; }
+  .p2 .intro .big { font-size:11.6pt; line-height:1.2; font-weight:300; letter-spacing:-.015em; }
   .p2 .intro .big b { font-weight:700; }
   .obj { list-style:none; }
-  .obj li { display:grid; grid-template-columns:6mm 1fr; padding:1.2mm 0; border-bottom:1px dashed #4a4a4a; font-size:7.3pt; line-height:1.3; color:#d8d8d8; }
+  .obj li { display:grid; grid-template-columns:6mm 1fr; padding:.8mm 0; border-bottom:1px dashed #4a4a4a; font-size:7.3pt; line-height:1.3; color:#d8d8d8; }
   .obj li:first-child { border-top:1px dashed #4a4a4a; }
   .obj li i { font-style:normal; color:var(--mute); font-size:6.6pt; }
   .obj li b { color:#fff; font-weight:700; display:block; font-size:8pt; }
@@ -87,6 +87,12 @@
   .models .hd span { font-size:7.2pt; font-style:italic; color:#cfcfcf; font-weight:300; }
   .models .row { padding:1.2mm 0; border-bottom:1px dashed #4a4a4a; font-size:6.9pt; line-height:1.36; color:#dcdcdc; }
   .models .row b { display:block; font-size:6.2pt; color:var(--mute); font-weight:600; text-transform:uppercase; letter-spacing:.05em; margin-bottom:.3mm; }
+  .building { position:relative; margin-top:4mm; }
+  .building img { display:block; width:100%; height:auto; }
+  .building .tag { position:absolute; left:4mm; top:3mm; font-weight:800; font-size:15pt; letter-spacing:-.01em; text-shadow:0 0 8px rgba(0,0,0,.25); }
+  .building .cap { position:absolute; left:0; right:0; bottom:0; padding:12mm 4mm 3.5mm; background:linear-gradient(transparent, rgba(0,0,0,.72)); font-size:17pt; line-height:1.08; font-weight:300; letter-spacing:-.02em; }
+  .building .cap b { font-weight:800; }
+  .building .loc { position:absolute; right:4mm; bottom:3.8mm; font-size:7pt; font-style:italic; color:#e6e6e6; font-weight:300; }
   .tbc { color:#fff; border-bottom:1px dotted #9a9a9a; font-style:italic; }
   .pk { display:grid; grid-template-columns:repeat(3,1fr); gap:3.5mm; margin-top:2.8mm; }
   .pk > div { border:1px solid #4a4a4a; padding:2.4mm 2.6mm; display:flex; flex-direction:column; }
@@ -100,9 +106,11 @@
   .steps div { border-top:1px solid #fff; padding-top:1.3mm; font-size:6.7pt; line-height:1.32; color:#cfcfcf; }
   .steps i { font-style:normal; font-size:6.4pt; color:var(--mute); display:block; }
   .steps b { display:block; color:#fff; font-size:8pt; font-weight:800; margin:.4mm 0 .5mm; }
-  .cta { margin-top:4.5mm; background:#fff; color:var(--ink); padding:3.6mm 4mm; display:flex; justify-content:space-between; align-items:center; gap:6mm; }
+  .cta { margin-top:auto; margin-bottom:7mm; background:#fff; color:var(--ink); padding:3.6mm 4mm; display:flex; justify-content:space-between; align-items:center; gap:6mm; }
   .cta h3 { font-family:"Inter Display",Inter,sans-serif; font-size:16pt; font-weight:800; letter-spacing:-.03em; line-height:1; }
   .cta p { font-size:7.4pt; line-height:1.4; max-width:95mm; }
+  .cta .tl { display:block; font-size:7.5pt; font-weight:700; margin-top:1.6mm; }
+  .cta .tl sup { font-size:5pt; }
   .cta p b { font-weight:700; }
   @media print { html,body{background:none;} .page{margin:0;} .p2{margin-top:0;} }
 </style>
@@ -169,46 +177,40 @@
   <div class="intro">
     <p class="big">Brands and institutions come to <b class="nw">Space Available</b> to turn intention into something <b>real</b>: an object made from waste, a space people want to visit, a community that keeps coming back. We bring <b>material</b>, <b>culture</b> and <b>community</b> together under one roof.</p>
     <ul class="obj">
-      <li><i>01</i><span><b>Make sustainability tangible</b>Objects and spaces built from post-consumer plastic, not just claims.</span></li>
-      <li><i>02</i><span><b>Earn cultural credibility</b>A design language trusted by Nike, Goldwin, DSM and Highsnobiety.</span></li>
+      <li><i>01</i><span><b>Make sustainability tangible</b>Objects and spaces, not just claims.</span></li>
+      <li><i>02</i><span><b>Earn cultural credibility</b>Trusted by Nike, Goldwin, DSM and Highsnobiety.</span></li>
       <li><i>03</i><span><b>Build community, not just reach</b>Weekly rituals with a creative Jakarta audience.</span></li>
       <li><i>04</i><span><b>Show the impact</b>Plastic diverted, per object and per project.</span></li>
     </ul>
   </div>
 
+  <div class="building">
+    <img src="assets/building_full.jpg" alt="Self Care Community Centre facade, Kemang, Jakarta">
+    <span class="tag">OUR BUILDING</span>
+    <p class="cap">Crafted from over <b>11 tonnes</b><br>of recycled plastic.</p>
+    <p class="loc">Self Care Community Centre · Kemang, Jakarta</p>
+  </div>
+
   <div class="label"><h3>Three Ways to Partner</h3><span>(make · build · gather)</span></div>
   <div class="models">
     <div>
-      <div class="img" style="background-image:url(assets/nike.jpg)"></div>
       <div class="hd"><h4>MAKE</h4><span>objects</span></div>
       <div class="row"><b>What we do</b>Co-branded circular products, capsules, merchandise and furniture editions, designed and produced from waste plastic.</div>
       <div class="row"><b>You receive</b>A limited edition with a built-in story and impact data per piece (e.g. 120g of plastic per Swoosh incense holder).</div>
       <div class="row"><b>Ideal for</b>Fashion, lifestyle, sports and hospitality brands.</div>
-      <div class="row"><b>Done with</b>Nike · Public Possession · Highsnobiety · DSM Singapore</div>
     </div>
     <div>
-      <div class="img" style="background-image:url(assets/goldwin.jpg)"></div>
       <div class="hd"><h4>BUILD</h4><span>spaces</span></div>
       <div class="row"><b>What we do</b>Pop-ups, retail fit-outs, exhibitions and installations, with live recycling workshops built in.</div>
       <div class="row"><b>You receive</b>A destination people visit, share and remember, with circularity shown in action.</div>
       <div class="row"><b>Ideal for</b>Retailers, malls, hotels, brands entering new markets, cultural institutions.</div>
-      <div class="row"><b>Done with</b>Goldwin (Tokyo) · Highsnobiety (Miami) · Brain Dead (LA)</div>
     </div>
     <div>
-      <div class="img" style="background-image:url(assets/recycling.jpg)"></div>
       <div class="hd"><h4>GATHER</h4><span>programs</span></div>
       <div class="row"><b>What we do</b>Co-hosted rituals, launches, private sessions, team wellbeing days and community clean-ups at SCCC.</div>
       <div class="row"><b>You receive</b>Ongoing presence with an engaged audience, plus content and employee engagement.</div>
       <div class="row"><b>Ideal for</b>Food &amp; drink and wellness brands, corporates (CSR / ESG), schools.</div>
-      <div class="row"><b>Done with</b>Empirical (Inner Spirit Drinks Club) · Kemang Recycling Club</div>
     </div>
-  </div>
-
-  <div class="label"><h3>Partnership Packages</h3><span>(start small, or go all in)</span></div>
-  <div class="pk">
-    <div><span class="tier">Entry</span><h5>Ritual Partner</h5><span class="mix">GATHER</span><p>Co-host one of our weekly programs for a season, or host a private session or launch at SCCC. Includes brand integration and shared content.</p><div class="inv">Investment: <span class="tbc">[to confirm]</span></div></div>
-    <div class="feat"><span class="tier">Signature</span><h5>Circular Capsule</h5><span class="mix">MAKE + GATHER</span><p>A co-branded object edition made from waste plastic, launched with an evening at SCCC and a recycling workshop.</p><div class="inv">Investment: <span class="tbc">[to confirm]</span></div></div>
-    <div><span class="tier">Flagship</span><h5>Full Ecosystem</h5><span class="mix">MAKE + BUILD + GATHER</span><p>Product, space and program together: a capsule, a pop-up or installation, and a program series around it.</p><div class="inv">Investment: <span class="tbc">[to confirm]</span></div></div>
   </div>
 
   <div class="label"><h3>How It Works</h3><span>(from first conversation to impact)</span></div>
@@ -222,16 +224,10 @@
   </div>
 
   <div class="cta">
-    <h3>let’s make<br>space together</h3>
+    <div><h3>let’s make<br>space together</h3><span class="tl">Make Space Within<sup>™</sup></span></div>
     <p>Tell us what you want to make, build or gather, and we’ll come back with a concept. <b>sabrina@spaceavailable.tv</b> · @space_available_jakarta · Jl. Kemang Raya 8B No. 9, Jakarta Selatan 12730</p>
   </div>
 
-  <div class="foot">
-    <h2>Make Space Within<sup class="tm">™</sup></h2>
-    <div><b>(Location)</b>Kemang, Jakarta<br>&nbsp;</div>
-    <div><b>(Contact)</b>sabrina@spaceavailable.tv<br>&nbsp;</div>
-    <div><b>(Visit)</b>www.spaceavailable.tv<br>&nbsp;</div>
-  </div>
 </div>
 </body>
 </html>
